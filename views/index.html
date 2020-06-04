@@ -1,0 +1,91 @@
+{{extend './layout.html'}}
+
+{{ block 'head' }}
+<style type="text/css">
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    body{
+        background-color:rgb(240 208 168);
+    }
+
+    .box{
+        margin:200px auto;
+        width:200px;
+        height:200px;
+        perspective:1000px;
+        /*background-color:rgb(240 208 168);*/
+
+    }
+    .box .stage{
+        transform-style:preserve-3d;
+        animation:run 15s infinite;
+    }
+    .box .love{
+        position:absolute;
+        left:100px;
+        width:100px;
+        height:200px;
+        border-top:1px solid red;
+        border-right:1px solid red;
+        border-radius:50% 50% 100% 0%/ 20% 30% 70% 0%;
+        transform-origin:left;
+    }
+    @keyframes run{
+        to{
+            transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        }
+    }
+    }
+</style>
+{{/block}}
+
+{{ block 'content' }}
+<div class="container">
+    <div class="box">
+        <div class="stage">
+            <div class="love" style="transform:rotatey(10deg); "></div>
+            <div class="love" style="transform:rotatey(20deg); "></div>
+            <div class="love" style="transform:rotatey(30deg); "></div>
+            <div class="love" style="transform:rotatey(40deg); "></div>
+            <div class="love" style="transform:rotatey(50deg); "></div>
+            <div class="love" style="transform:rotatey(60deg); "></div>
+            <div class="love" style="transform:rotatey(70deg); "></div>
+            <div class="love" style="transform:rotatey(80deg); "></div>
+            <div class="love" style="transform:rotatey(90deg); "></div>
+            <div class="love" style="transform:rotatey(100deg); "></div>
+            <div class="love" style="transform:rotatey(110deg); "></div>
+            <div class="love" style="transform:rotatey(120deg); "></div>
+            <div class="love" style="transform:rotatey(130deg); "></div>
+            <div class="love" style="transform:rotatey(140deg); "></div>
+            <div class="love" style="transform:rotatey(150deg); "></div>
+            <div class="love" style="transform:rotatey(160deg); "></div>
+            <div class="love" style="transform:rotatey(170deg); "></div>
+            <div class="love" style="transform:rotatey(180deg); "></div>
+            <div class="love" style="transform:rotatey(190deg); "></div>
+            <div class="love" style="transform:rotatey(200deg); "></div>
+            <div class="love" style="transform:rotatey(210deg); "></div>
+            <div class="love" style="transform:rotatey(220deg); "></div>
+            <div class="love" style="transform:rotatey(230deg); "></div>
+            <div class="love" style="transform:rotatey(240deg); "></div>
+            <div class="love" style="transform:rotatey(250deg); "></div>
+            <div class="love" style="transform:rotatey(260deg); "></div>
+            <div class="love" style="transform:rotatey(270deg); "></div>
+            <div class="love" style="transform:rotatey(280deg); "></div>
+            <div class="love" style="transform:rotatey(290deg); "></div>
+            <div class="love" style="transform:rotatey(300deg); "></div>
+            <div class="love" style="transform:rotatey(310deg); "></div>
+            <div class="love" style="transform:rotatey(320deg); "></div>
+            <div class="love" style="transform:rotatey(330deg); "></div>
+            <div class="love" style="transform:rotatey(340deg); "></div>
+            <div class="love" style="transform:rotatey(350deg); "></div>
+            <div class="love" style="transform:rotatey(360deg); "></div>
+        </div>
+    </div>
+</div>
+
+{{/block}}
+
+{{ block 'script' }}
+{{/block}}

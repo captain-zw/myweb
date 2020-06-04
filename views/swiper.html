@@ -1,0 +1,337 @@
+{{extend './layout.html'}}
+
+{{ block 'head' }}
+<style>
+	*{
+		margin:0;
+		padding:0;
+		list-style: none;
+	}
+	.box{
+		position: relative;
+		/*top:5px;*/
+		padding:5px auto;
+		width: 100%;
+		height: 100%;
+		/*background-color:pink;*/
+		/*border-radius: 10px;*/
+	}
+	.box .left{
+		position: relative;
+		float: left;
+		width:20%;
+		height:20%;
+		/*background-color: #666;*/
+	}
+	.box .right{
+		position: relative;
+		float: left;
+		width:80%;
+		height:100%;
+		overflow: hidden;
+		/*background-color: #999;*/
+		border-radius: 10px;
+	}
+	.left ul{
+		height: 500%;
+	}
+	.left ul>li{
+		display: block;
+		flex: 1;
+		width:100%;
+		height: 20%;
+	}
+	.left ul>li p{
+		padding-top: 16%;
+		text-align: center;
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 100%;
+	}
+	.left ul>li.on{
+		background-color: pink;
+		border-radius: 10px;
+	}
+	.right .pic{
+		position: absolute;
+		width:100%;
+		height:100%;
+		/*border-radius: 20px;*/
+		/* background-color: red; */
+	}
+	.pic li{
+		position: absolute;
+		display: none;
+		width:100%;
+		height:100%;
+		/* background-color: blue; */
+	}
+	.pic li.on{
+		display: block;
+	}
+	.right .pic{
+		display: none;
+	}
+	.right div.on1{
+		display: block;
+	}
+	img{
+		width:100%;
+		height:100%;
+	}
+	.right .btn  li{
+		/*position: relative;*/
+		/*left:80%;*/
+		/*top: 80%;*/
+		display: inline-block;
+		width:10px;
+		height:10px;
+		background-color: #fff;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 19px;
+		font-size: 14px;
+	}
+	.right .btn{
+		position: relative;
+		display: none;
+	}
+	.right .on2{
+		position: absolute;
+		right:5%;
+		bottom: 0;
+		display: inline-block;
+	}
+	.right .btn li.on{
+		background-color: orange;
+	}
+	.swiperr li{
+		list-style: disc;
+		/*width: 250px;*/
+		/*min-width: 150px;*/
+		margin: 10px 10px;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+	}
+	.swiperr a{
+		/*color:deeppink;*/
+		text-decoration: none;
+	}
+	.picss li{
+		border-radius: 10px;
+		overflow: hidden;
+		margin: 15px;
+		box-shadow:2px 2px 3px lightslategray
+	}
+</style>
+
+
+{{/block}}
+
+{{ block 'content' }}
+<div class="container">
+	<div class="row" style="overflow: hidden;padding: 20px;min-width: 700px;max-width: 1000px">
+		<div class="col-xs-7" style="float: left;box-shadow:2px 2px 3px lightslategray
+;margin-right: 5px;width: 55%;background-color:lightgreen;border-radius:10px">
+			<div class="box">
+				<div class="left">
+					<ul>
+						<li class="on"><p>汽车</p></li>
+						<li><p>女性</p></li>
+						<li><p>风景</p></li>
+						<li><p>美食</p></li>
+						<li><p>动漫</p></li>
+					</ul>
+				</div>
+				<div class="right">
+					<div class="pic on1">
+						<ul>
+							<li class="on"><img src="../public/img/swiper/1-1.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/1-2.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/1-3.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/1-4.jpg" cover alt=""></li>
+						</ul>
+					</div>
+					<div class="btn on2">
+						<ul>
+							<li class="on"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+					<div class="pic">
+						<ul>
+							<li class="on"><img src="../public/img/swiper/2-1.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/2-2.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/2-3.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/2-4.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/2-5.jpg" cover alt=""></li>
+						</ul>
+					</div>
+					<div class="btn">
+						<ul>
+							<li class="on"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+					<div class="pic">
+						<ul>
+							<li class="on"><img src="../public/img/swiper/3-1.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/3-2.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/3-3.jpg" cover alt=""></li>
+						</ul>
+					</div>
+					<div class="btn">
+						<ul>
+							<li class="on"></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+					<div class="pic">
+						<ul>
+							<li class="on"><img src="../public/img/swiper/4-1.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/4-2.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/4-3.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/4-4.jpg" cover alt=""></li>
+						</ul>
+					</div>
+					<div class="btn">
+						<ul>
+							<li class="on"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+					<div class="pic">
+						<ul>
+							<li class="on"><img src="../public/img/swiper/5-1.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/5-2.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/5-3.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/5-4.jpg" cover alt=""></li>
+							<li><img src="../public/img/swiper/5-5.jpg" cover alt=""></li>
+						</ul>
+					</div>
+					<div class="btn">
+						<ul>
+							<li class="on"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-5" style="float: right;width: 44%;		box-shadow:2px 2px 3px lightslategray
+ ;overflow: hidden;background-color:lightgreen;border-radius:10px">
+			<h2 class="center" style="padding: 10px 5px; border-bottom: 2px solid lime;">诗词鉴赏</h2>
+			<div>
+				<ul class='swiperr'  style="margin:6px 10px;">
+					<li><a href="">人生若只如初见，何事秋风悲画扇。 —— 纳兰性德《木兰词·拟古决绝词柬友》</a></li>
+					<li><a href="">曾经沧海难为水，除却巫山不是云。 —— 元稹《离思五首·其四》</a></li>
+					<li><a href="">但愿人长久，千里共婵娟。 —— 苏轼《水调歌头·丙辰中秋》</a></li>
+					<li><a href="">十年生死两茫茫。 —— 苏轼《江城子·乙卯正月二十日夜记梦》</a></li>
+					<li><a href="">问君能有几多愁？恰似一江春水向东流。 —— 李煜《虞美人·春花秋月何时了》</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<h3 style="padding-top: 50px;">经典美文</h3>
+	<div class="row" >
+		<div style="float:left;width: 60%;">
+			{{each data}}
+			<div style="background-color: #fff;border-radius: 5px;box-shadow:2px 2px 3px lightslategray;width: 100%; margin: 20px auto;padding: 10px">
+				<h5>{{$value.title}}</h5>
+				<div>{{$value.author}} {{$value.time}}</div>
+				<div style="text-indent: 32px">{{$value.content}}</div>
+			</div>
+			{{/each}}
+		</div>
+		<div  class="picss" style="float:right;width: 38%;padding-top: 4px;">
+			<ul>
+				<li><img src="../public/img/1.jpg" alt=""></li>
+				<li><img src="../public/img/2.jpg"></li>
+				<li><img src="../public/img/3.jpg"></li>
+				<li><img src="../public/img/4.jpg"></li>
+				<li><img src="../public/img/5.jpg"></li>
+				<li><img src="../public/img/6.jpg"></li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+
+{{/block}}
+
+{{ block 'script' }}
+<script>
+	const box = document.getElementsByClassName("box")[0]
+	const left = document.querySelectorAll(".left li")
+	const pic = document.getElementsByClassName("pic")
+	const btn = document.getElementsByClassName("btn")
+	const len = left.length
+	let index = 0
+	// let time = null
+	for (let i = 0; i < len; i++) {
+
+		left[i].onmouseenter = function(){
+			left[index].classList.remove("on")
+			pic[index].classList.remove("on1")
+			btn[index].classList.remove("on2")
+			index = i
+			left[index].classList.add("on")
+			pic[index].classList.add("on1")
+			btn[index].classList.add("on2")
+		}
+		left[i].zw = 0
+		let  btn_li = btn[i].getElementsByTagName("li")
+		let  pic_li = pic[i].getElementsByTagName("li")
+		for (let j = 0; j < pic_li.length; j++) {
+			btn_li[j].onmouseenter = function(){
+				// console.log(j)
+				let idx = left[index].zw
+				btn_li[idx].classList.remove("on")
+				pic_li[idx].classList.remove("on")
+				left[i].zw = idx = j
+				btn_li[idx].classList.add("on")
+				pic_li[idx].classList.add("on")
+			}
+		}
+	}
+	// console.log(i)
+	function play(){
+		let idx = left[index].zw
+		let btn_li = btn[index].getElementsByTagName("li")
+		let pic_li = pic[index].getElementsByTagName("li")
+		let len =  pic_li.length
+		btn_li[idx].classList.remove("on")
+		pic_li[idx].classList.remove("on")
+		// left[i].zw = idx = j
+		idx++
+		if (idx===len){
+			left[index].zw = idx = 0
+		}else{
+			left[index].zw = idx
+		}
+		btn_li[idx].classList.add("on")
+		pic_li[idx].classList.add("on")
+	}
+	time_id = setInterval(()=>{
+		play()
+	},2000)
+	window.onblur = box.onmouseenter=()=>{
+		clearInterval(time_id)
+	}
+	window.onfocus = box.onmouseleave=()=>{
+		time_id = setInterval(play,2000)
+	}
+</script>
+{{/block}}

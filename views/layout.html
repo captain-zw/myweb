@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>zw</title>
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    {{ block 'head'}}{{ /block }}
+</head>
+<body>
+{{ include './header.html' }}
+{{ block 'content' }}
+    <h1>默认内容</h1>
+{{/block}}
+
+<% include('./footer.html') %>
+<!--<audio loop src="../public/bgaudio.mp3" id="audio" autoplay preload="auto"></audio>-->
+<script src="/node_modules/jquery/dist/jquery.js"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<!--<script>-->
+<!--    document.addEventListener('DOMContentLoaded',function () {-->
+<!--        function audioAutoPlay() {-->
+<!--            var audio = document.getElementById('audio');-->
+<!--            audio.play()-->
+<!--        }-->
+<!--        audioAutoPlay();-->
+<!--    })-->
+<!--</script>-->
+{{ block 'script'}}{{ /block }}
+
+</body>
+</html>
